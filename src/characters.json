@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Lindsey",
+      "image":
+        "data:image/jpeg;base64,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"
+    },
+    {
+      "id": 2,
+      "name": "Sam",
+      "image":
+        "https://vignette.wikia.nocookie.net/freaksandgeeks/images/3/3f/Sam-Weir-imdb-30.jpg/revision/latest/scale-to-width-down/340?cb=20150127053219"
+    },
+    {
+      "id": 3,
+      "name": "Bill",
+      "image":
+        "https://vignette.wikia.nocookie.net/freaksandgeeks/images/6/6d/Bill-Haverchuck-imdb-61.jpg/revision/latest/scale-to-width-down/340?cb=20150128065541"
+    },
+    {
+      "id": 4,
+      "name": "Nick",
+      "image":
+        "https://static.fusionmovies.to/images/character/rSo_1iSfZNZPlQFSlu3DsDXgWkWhvymLB0CS9NFBGYlL8c-NUScqXoaCG5s0hoK9ERQI2vRxKXXpjLBpa5olLRY97HOeCuhesphL7JFcGIIHoiSDGCbBwSO5FpedkWiO.jpg?1"
+    },
+    {
+      "id": 5,
+      "name": "Daniel",
+      "image":
+        "https://vignette.wikia.nocookie.net/freaksandgeeks/images/6/6e/Daniel-Desario-imdb-23.jpg/revision/latest?cb=20150124221004"
+    },
+    {
+      "id": 6,
+      "name": "Kim",
+      "image":
+        "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters_opt/p-freaks-and-geeks-busy-philipps.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Millie",
+      "image":
+        "https://images.hellogiggles.com/uploads/2019/04/02172726/millie-freaksgeeks.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Cindy",
+      "image":
+        "https://i.insider.com/5d9b411d269e0e3f2163d26d?width=600&format=jpeg&auto=webp"
+    },
+    {
+      "id": 9,
+      "name": "Ken",
+      "image":
+        "https://vignette.wikia.nocookie.net/freaksandgeeks/images/0/0c/Ken-Miller-imdb-58.jpg/revision/latest/scale-to-width-down/340?cb=20150127052928"
+    },
+    {
+      "id": 10,
+      "name": "Neal",
+      "image":
+        "https://i.insider.com/5d9b3fff6932a044575f8eb9?width=1100&format=jpeg&auto=webp"
+    },
+    {
+      "id": 11,
+      "name": "Jean",
+      "image":
+        "https://www.planetclaire.tv/wp-content/uploads/2000/07/freaks-and-geeks-jean-weir.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Harold",
+      "image":
+        "https://vignette.wikia.nocookie.net/freaksandgeeks/images/d/d1/Harold-Weir-imdb-65.jpg/revision/latest?cb=20150130071807"
+    }
+  ]
+  
