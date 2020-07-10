@@ -1,17 +1,24 @@
 import React from "react";
 import "./style.css";
 
-function CharacterCard(props) {
-    return (
-        <div className="card">
-            <div className="img-container">
-            <img alt={props.name} src={props.image} />
-            </div>
-            <div className="card-title">
-                <p>{props.name}</p>
-            </div>
-        </div>
-    );
-}
+class CharacterCard extends React.Component {
+    clicker = () => {
+        this.props.handleOnClick(this.props.id)
+    };
+
+    render() {
+        return (
+            <>
+                <div class="col-lg-2">
+                    <div className="card" onClick={this.clicker}>
+                        <div className="img-container">
+                            <img class="img-fluid" alt={this.props.name} src={this.props.image} />
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    };
+};
   
 export default CharacterCard;
