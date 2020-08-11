@@ -11,9 +11,7 @@ class App extends React.Component {
   };
 
   componentWillMount() {
-    // restartGame();
     this.randomizeCards();
-
   }
 
   increaseScore = () => {
@@ -25,13 +23,19 @@ class App extends React.Component {
   }
 
   // Function to change highScore state to highest score
-  getHighScore = () => {
+  setHighScore = () => {
     let newHighScore = this.state.currentCount;
     if (this.state.currentCount > this.state.highScore) {
       this.setState({ highScore: newHighScore })
       //this.restartGame();
     }
   }
+
+  // Function to reset characters clicked to false
+  resetCharacters = data => {
+    characters.map(item => ({ ...item, clicked: false }));
+    return data;
+  };
 
   // Function to randomize rendered characters
   randomizeCards = () => {
@@ -50,30 +54,19 @@ class App extends React.Component {
   }
 
   // Function to set all character's "clicked" back to false
-  clickedToFalse = () => {
-
-  }
-
-  // shuffleData = data => {
-  //   let i = data.length - 1;
-  //   while (i > 0) {
-  //   const j = Math.floor(Math.random() * (i + 1));
-  //   const temp = data[i];
-  //   data[i] = data[j];
-  //   data[j] = temp;
-  //   i--;
+  // changeToFalse = (id) => {
+  //   const chosen = this.state.characters.filter(characters => characters.id === id);
+  //   if(chosen[0].clicked === true) {
+  //     chosen[0].clicked = false;
   //   }
-  //   return data;
-  // };
-  
-  
+  // }
   
   // Function to restart the game
   restartGame = () => { 
-    this.getHighScore();
+    this.setHighScore();
     this.resetScore();
     this.randomizeCards();
-    this.clickedToFalse();
+    this.resetCharacters();
   }
 
   // Function to increase score when a new character is clicked, or reset the score to 0 and update the top score if a character is clicked twice
