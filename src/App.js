@@ -32,10 +32,13 @@ class App extends React.Component {
   }
 
   // Function to reset characters clicked to false
-  resetCharacters = data => {
-    characters.map(item => ({ ...item, clicked: false }));
-    return data;
+  resetData = data => {
+    const resetData = data.map(item => ({ ...item, clicked: false }));
+    return (
+      this.setState({ characters: resetData })
+    );
   };
+
 
   // Function to randomize rendered characters
   randomizeCards = () => {
@@ -48,25 +51,15 @@ class App extends React.Component {
       people[j] = temp;
       i--;
     }
-    return (
-      this.setState({ characters: people })
-    );
+    return people;
   }
-
-  // Function to set all character's "clicked" back to false
-  // changeToFalse = (id) => {
-  //   const chosen = this.state.characters.filter(characters => characters.id === id);
-  //   if(chosen[0].clicked === true) {
-  //     chosen[0].clicked = false;
-  //   }
-  // }
   
   // Function to restart the game
   restartGame = () => { 
     this.setHighScore();
     this.resetScore();
     this.randomizeCards();
-    this.resetCharacters();
+    this.resetData(characters);
   }
 
   // Function to increase score when a new character is clicked, or reset the score to 0 and update the top score if a character is clicked twice
