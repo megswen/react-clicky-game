@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import CharacterCard from "./components/CharacterCard";
 import characters from "./characters.json";
+// import Navbar from "./components/Navbar";
+import Wrapper from "./components/Wrapper";
 
 class App extends React.Component {
   state = {
@@ -38,7 +40,6 @@ class App extends React.Component {
       this.setState({ characters: resetData })
     );
   };
-
 
   // Function to randomize rendered characters
   randomizeCards = () => {
@@ -77,32 +78,33 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <Wrapper>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <h4 class="nav-header">Clicky Game</h4>
             <p id="correct-incorrect"></p>
             <p id="score">Score: {this.state.currentCount}</p>
             <p id="top-score">Top Score: {this.state.highScore}</p>
-        </nav>
-        <div class="jumbotron"></div>
-        <div className="text-center title">Freaks and Geeks</div>
-        <div className="card-container">
-          <div className="row">
-            {this.state.characters.map((characters, index) => {
-              return (
-                <div id='cardItem' className="col-lg-3">
-                  <CharacterCard 
-                    key={index}
-                    id={characters.id}
-                    name={characters.name}
-                    image={characters.image} 
-                    clicked={characters.clicked}
-                    handleOnClick={this.clicker}
-                   />
-                </div>
-              );
-            })}
+          </nav>
+          <div className="text-center title">Freaks and Geeks</div>
+          <div className="card-container">
+            <div className="row">
+              {this.state.characters.map((characters, index) => {
+                return (
+                  <div id='cardItem' className="col-lg-3">
+                    <CharacterCard 
+                      key={index}
+                      id={characters.id}
+                      name={characters.name}
+                      image={characters.image} 
+                      clicked={characters.clicked}
+                      handleOnClick={this.clicker}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </Wrapper>
       </>
     );
   }
