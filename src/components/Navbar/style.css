@@ -3,5 +3,12 @@
 }
 
 .score-box {
-    float: right;
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
 } 
+
+.score .top-score {
+    display: inline-block;
+}
