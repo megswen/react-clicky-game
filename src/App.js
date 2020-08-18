@@ -2,16 +2,16 @@ import React from 'react';
 import './App.css';
 import CharacterCard from "./components/CharacterCard";
 import characters from "./characters.json";
-// import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
 
 class App extends React.Component {
   state = {
-    characters, 
+    characters,
     currentCount: 0,
     highScore: 0
-  };
-
+  }
+ 
   componentWillMount() {
     this.randomizeCards();
   }
@@ -79,13 +79,10 @@ class App extends React.Component {
     return (
       <>
         <Wrapper>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <h4 class="nav-header">Clicky Game</h4>
-            <p id="correct-incorrect"></p>
-            <p id="score">Score: {this.state.currentCount}</p>
-            <p id="top-score">Top Score: {this.state.highScore}</p>
-          </nav>
-          <div className="text-center title">Freaks and Geeks</div>
+        <Navbar 
+          score={this.state.currentCount}
+          highScore={this.state.highScore}
+        />
           <div className="card-container">
             <div className="row">
               {this.state.characters.map((characters, index) => {

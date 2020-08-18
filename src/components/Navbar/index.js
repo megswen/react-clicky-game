@@ -1,21 +1,18 @@
 import React from "react";
 import "./style.css";
 
-class Navbar extends React.Component {
-    // Function for Navbar
-
-    render() {
-        return (
-            <>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <h4 class="nav-header">Clicky Game</h4>
-                    <p id="correct-incorrect"></p>
-                    <p id="score">Score: {this.state.currentCount}</p>
-                    <p id="top-score">Top Score: {this.state.highScore}</p>
-                </nav>
-            </>
-        );
-    };
+function Navbar(props) {
+    return (
+        <>
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <h4 className="nav-header">Clicky Game</h4>
+                <div className="score-box">
+                    <p id="score">Score: {props.score}</p>
+                    <p id="top-score">Top Score: {props.highScore}</p>
+                </div>
+            </nav>
+        </>
+    );
 };
   
 export default Navbar;
