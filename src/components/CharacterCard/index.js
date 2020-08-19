@@ -12,7 +12,7 @@ class CharacterCard extends React.Component {
                 <div class="col-lg-2">
                     <div className="card" onClick={this.clicker}>
                         <div className="img-container">
-                            <img class="img-fluid" alt={this.props.name} src={this.props.image} />
+                            <img className="img-fluid card-image" alt={this.props.name} src={this.props.image} />
                         </div>
                     </div>
                 </div>

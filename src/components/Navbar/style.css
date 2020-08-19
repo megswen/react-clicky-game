@@ -1,14 +1,35 @@
 .navbar {
-    background-color: red;
+    background-color: rgb(202, 42, 42);
+    height: 100px;
+    box-shadow: 0px 0px 10px black;
+    margin-bottom: 30px;
+}
+
+.nav-header {
+    margin-left: 50px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px 10px black;
 }
 
 .score-box {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 18px;
     right: 20px;
+    width: 270px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-shadow: 3px 3px 10px black;
 } 
 
-.score .top-score {
-    display: inline-block;
+.score {
+    flex: 1;
+    margin: 10px;
+}
+
+.top-score {
+    flex: 2;
+    margin: 10px;
 }
