@@ -8,18 +8,14 @@ class CharacterCard extends React.Component {
 
     render() {
         return (
-            <>
-                <div class="col-lg card-col">
-                    <div className="card" onClick={this.clicker}>
-                        <div
-                            role="img"
-                            aria-label="click item"
-                            style={{ backgroundImage: `url("${this.props.image}")` }}
-                            className="img-fluid card-image"
-                        />
-                    </div>
-                </div>
-            </>
+            <div className="card" onClick={this.clicker}>
+                <div
+                    role="img"
+                    aria-label="click item"
+                    style={{ backgroundImage: `url("${this.props.image}")` }}
+                    className="img-fluid card-image"
+                />
+            </div>
         );
     };
 };
