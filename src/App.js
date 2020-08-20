@@ -79,16 +79,16 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Wrapper>
-        <Navbar 
+      <Navbar 
           score={this.state.currentCount}
           highScore={this.state.highScore}
         />
-          <div className="card-container">
-            <div className="row">
+        <Wrapper>
+          <div className="card-container ml-5 mr-5">
+            <div className="row ">
               {this.state.characters.map((characters, index) => {
                 return (
-                  <div id='cardItem col-lg-3'>
+                  <div id='cardItem col-lg-12 center-block text-center'>
                     <CharacterCard 
                       key={index}
                       id={characters.id}
@@ -102,8 +102,8 @@ class App extends React.Component {
               })}
             </div>
           </div>
-          <Footer />
         </Wrapper>
+        <Footer />
       </>
     );
   }
