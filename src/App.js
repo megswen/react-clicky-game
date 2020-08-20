@@ -4,6 +4,7 @@ import CharacterCard from "./components/CharacterCard";
 import characters from "./characters.json";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   state = {
@@ -101,6 +102,7 @@ class App extends React.Component {
               })}
             </div>
           </div>
+          <Footer />
         </Wrapper>
       </>
     );
