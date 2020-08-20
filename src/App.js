@@ -84,11 +84,11 @@ class App extends React.Component {
           score={this.state.currentCount}
           highScore={this.state.highScore}
         />
-          <div className="card-container justify-content-center">
+          <div className="card-container">
             <div className="row">
               {this.state.characters.map((characters, index) => {
                 return (
-                  <div id='cardItem' className="col-lg-3">
+                  <div id='cardItem col-lg-3'>
                     <CharacterCard 
                       key={index}
                       id={characters.id}

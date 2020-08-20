@@ -2,4 +2,5 @@
     background-image: url("../../images/lockers.jpg");
     background-size: cover;
     height: 100%;
+    position: fixed;
 }
